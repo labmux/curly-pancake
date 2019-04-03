@@ -8,9 +8,14 @@ import { DadJokesApiService } from '../../models/services/dad-jokes-api.service'
 })
 export class DadJokesComponent implements OnInit {
 
+  // parameter that will hold our joke
   joke: string;
+
   constructor(private jokeApi: DadJokesApiService) { }
 
+    /**
+     * On call, assign random dad joke to our joke parameter
+     */
   ngOnInit() {
     this.jokeApi.getDadJoke().subscribe( results => {
       this.joke = results.joke;

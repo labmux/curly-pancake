@@ -4,12 +4,16 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'starCounter'
 })
 export class StarIncreasePipe implements PipeTransform {
-  output = '';
 
-  transform(value: number, args?: any): any {
-    if (value % 5 === 0) this.output += '*';
+    /**
+     * Every 5 counts, adds one star
+     * @param {number} value
+     * @param {string} stars
+     * @returns {any}
+     */
+  transform(value: number, stars: string): any {
+    if (value % 5 === 0) stars += '*';
 
-    return this.output;
+    return stars;
   }
-
 }
