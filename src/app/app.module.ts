@@ -10,6 +10,8 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { HomeComponent } from './views/home/home.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { CounterComponent } from './views/counter/counter.component';
+import { StarIncreasePipe } from './views/counter/star-increase.pipe';
+import { StarDecreasePipe } from './views/counter/star-decrease.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CounterComponent } from './views/counter/counter.component';
     MainComponent,
     HomeComponent,
     NotFoundComponent,
-    CounterComponent
+    CounterComponent,
+    StarIncreasePipe,
+    StarDecreasePipe
   ],
   imports: [
     BrowserModule,
