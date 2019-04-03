@@ -7,6 +7,7 @@ import { CounterComponent } from './views/counter/counter.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'counter', component: CounterComponent},
+  // { path: 'dadJoke', component: DadJokeCompon}
   {path: '**', pathMatch: 'full', component: NotFoundComponent}
 ];
 

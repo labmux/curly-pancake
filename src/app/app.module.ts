@@ -12,6 +12,9 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
 import { CounterComponent } from './views/counter/counter.component';
 import { StarIncreasePipe } from './views/counter/star-increase.pipe';
 import { StarDecreasePipe } from './views/counter/star-decrease.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { DadJokesComponent } from './views/dad-jokes/dad-jokes.component';
+import { DadJokesApiService } from './models/services/dad-jokes-api.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { StarDecreasePipe } from './views/counter/star-decrease.pipe';
     NotFoundComponent,
     CounterComponent,
     StarIncreasePipe,
-    StarDecreasePipe
+    StarDecreasePipe,
+    DadJokesComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +37,10 @@ import { StarDecreasePipe } from './views/counter/star-decrease.pipe';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ DadJokesApiService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
